@@ -6,6 +6,8 @@ xtal-json-parse is a custom element which parses the json inside the element.
 
 This can be used to set a property of a neighboring element.
 
+[Demo](https://codepen.io/bahrus/pen/VwPBrVz)
+
 Example:
 
 ```html
@@ -34,6 +36,7 @@ Example:
 <p-d on=value-changed to=[-value] val=detail.value init-val=value m=1></p-d>
 <xtal-editor -value key="Classes of Crystalline Solids"></xtal-editor>
 ```
+
 
 ## Running Your Element Locally
 

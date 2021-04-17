@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xtal-json-parse demo</title>
+</head>
+<body>
+    <h3>Basic xtal-json-parse demo</h3>
+    <xtal-json-parse disabled>
+        <script type="application/json">
+        [
+            {
+                "type": "Ionic",
+                "examples": [
+                    {
+                        "formula": "NaCl",
+                        "meltingPoint": 801,
+                        "boilingPoint": 1413
+                    },
+                    {
+                        "formula": "CaF2",
+                        "meltingPoint": 1418,
+                        "boilingPoint": 1533
+                    }
+                ]
+            }
+            
+        ]
+        </script>
+    </xtal-json-parse>
+    <p-d on=value-changed to=[-value] val=detail.value init-val=value m=1></p-d>
+    <xtal-editor -value key="Classes of Crystalline Solids"></xtal-editor>
+    <script type=module crossorigin>
+        import 'https://cdn.skypack.dev/xtal-json-parse@0.0.1?min';
+        import 'https://cdn.skypack.dev/pass-down@0.0.28?min';
+        import 'https://cdn.skypack.dev/xtal-editor@0.0.35?min';
+    </script>
+</body>
+</html>
