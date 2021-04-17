@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "xtal-element": "0.0.378"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-json-parse.git"
