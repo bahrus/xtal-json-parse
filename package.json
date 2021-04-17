@@ -1,25 +1,42 @@
 {
   "name": "xtal-json-parse",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "keywords": [
+    "Web Components",
+    "Custom Elements",
+    "JSON"
+  ],
+  "description": "Parse JSON",
+  "main": "xtal-json-parse.js",
+  "module": "xtal-json-parse.js",
   "scripts": {
-    "serve": "node node_modules/xtal-test/serve.js"
+    "serve": "node node_modules/xtal-test/serve.js",
+    "package-check": "package-check"
   },
   "dependencies": {
     "xtal-element": "0.0.378"
   },
   "devDependencies": {
+    "@skypack/package-check": "0.2.2",
     "pass-down": "0.0.28",
     "xtal-editor": "0.0.35",
     "xtal-test": "0.0.50"
   },
+  "exports":{
+    ".": "./xtal-json-parse.js",
+    "./xtal-json-parse.js": "./xtal-json-parse.js"
+  },
+  "files": [
+    "xtal-json-parse.*",
+    "types.d.ts"
+  ],
+  "types": "types.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-json-parse.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "anderson.bruce.b@gmail.com",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/xtal-json-parse/issues"
   },

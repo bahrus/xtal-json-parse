@@ -1,5 +1,6 @@
 import {xc, PropAction, PropDef, PropDefMap, ReactiveSurface} from 'xtal-element/lib/XtalCore.js';
 import {passAttrToProp} from 'xtal-element/lib/passAttrToProp.js';
+import {XtalJsonParseProps} from './types.d.js';
 
 type X = XtalJsonParse;
 /**
@@ -8,7 +9,7 @@ type X = XtalJsonParse;
  * @event value-changed
  *  
  */
-export class XtalJsonParse extends HTMLElement implements ReactiveSurface{
+export class XtalJsonParse extends HTMLElement implements ReactiveSurface, XtalJsonParseProps{
     static is = 'xtal-json-parse';
     static observedAttributes = ['disabled', 'string-to-parse'];
     attributeChangedCallback(n: string, ov: string, nv: string){
@@ -56,6 +57,10 @@ export class XtalJsonParse extends HTMLElement implements ReactiveSurface{
      */
     stringToParse: string;
 
+
+    /**
+     * 
+     */
     parsedObject: any;
 
 
@@ -164,3 +169,10 @@ const slicedPropDefs = xc.getSlicedPropDefs(propDefMap);
 xc.letThereBeProps(XtalJsonParse, slicedPropDefs, 'onPropChange');
 
 xc.define(XtalJsonParse);
+
+
+declare global {
+    interface HTMLElementTagNameMap {
+        "xtal-json-parse": XtalJsonParse,
+    }
+}
